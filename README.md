@@ -1,5 +1,5 @@
-# Mini MVC Project for Chat__
-##Without Frameworks or others tools JUST `PHP 5 & SQL & HTML 5`
+# Mini MVC Project for Chat
+Without Frameworks or others tools JUST `PHP 5 & SQL & HTML 5`
 
 ### 1 - Create new database `mini`
 ### 2 - Import sql script from `extras/mini.sql`

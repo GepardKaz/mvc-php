@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class Application
+ */
 class Application
 {
     private $url_controller = null;

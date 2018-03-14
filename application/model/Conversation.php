@@ -1,8 +1,15 @@
 <?php
 
+/**
+ * Class Conversation
+ */
 
 class Conversation
 {
+    /**
+     * Conversation constructor.
+     * @param $db
+     */
     function __construct($db)
     {
         try
@@ -14,6 +21,11 @@ class Conversation
         }
     }
 
+    /**
+     * find all conversation by user
+     * @param $id
+     * @return mixed
+     */
     public function findAllByUser($id)
     {
         $sql = "select c.id as id , c.created as created from conversation c  INNER JOIN member m ON c.id = m.conversation where m.user = :id";
@@ -25,7 +37,11 @@ class Conversation
         return $query->fetchAll();
     }
 
-
+    /**
+     * get members from conversations
+     * @param $id
+     * @return mixed
+     */
     public function getMembers($id)
     {
         $sql = "select u.email from member m INNER JOIN user u ON m.user = u.id where m.conversation = :id";
@@ -37,6 +53,10 @@ class Conversation
         return $query->fetchAll();
     }
 
+    /**
+     * save new user
+     * @param $users
+     */
     public function add($users)
     {
         $sql = "INSERT INTO conversation () VALUES ()";

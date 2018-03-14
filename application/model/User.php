@@ -1,8 +1,14 @@
 <?php
 
-
+/**
+ * Class User
+ */
 class User
 {
+    /**
+     * User constructor.
+     * @param $db
+     */
     function __construct($db)
     {
         try
@@ -14,6 +20,13 @@ class User
         }
     }
 
+    /**
+     * check email & password
+     *
+     * @param $email
+     * @param $pwd
+     * @return mixed
+     */
     public function login($email, $pwd)
     {
         $sql = "select * from user where email = :email            ";
@@ -30,6 +43,10 @@ class User
             return null;
     }
 
+    /**
+     * get memebers of conversation
+     * @return mixed
+     */
     public function getOtherMembers()
     {
         $sql = "select email,id from user where id <> :id";

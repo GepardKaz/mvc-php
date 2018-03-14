@@ -2,6 +2,9 @@
 
 require APP . 'model/User.php';
 
+/**
+ * Class Login
+ */
 class Login extends Controller
 {
 

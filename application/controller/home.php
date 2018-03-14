@@ -4,6 +4,9 @@ require APP . 'model/User.php';
 require APP . 'model/Conversation.php';
 require APP . 'model/Message.php';
 
+/**
+ * Class Home
+ */
 class Home extends Controller
 {
 
